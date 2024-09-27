@@ -1,0 +1,45 @@
+logging:
+    level:
+        root: INFO
+        org:
+            springframework:
+                boot:
+                    autoconfigure: ERROR
+spring:
+    application:
+        name:
+            wallet
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: update
+        show-sql: false
+        defer-datasource-initialization: true
+    datasource:
+        url: jdbc:h2:mem:testdb
+        username: root
+        password: password
+    h2:
+        console:
+            enabled: true
+    sql:
+        init:
+            mode: always
+ms:
+  messages:
+    OK: OK
+    BR400: Error in request
+    BR401: There is already a registered user with the email
+    BR402: The user with email does not exist
+    BR403: The destination wallet does not exist
+
+    BR404: Invalid firstName
+    BR405: incorrect email format
+    BR406: Incorrect amount
+    BR407: Invalid wallet account
+
+    
+    
+    CE401: Incorrect amount
+    CE402: insufficient funds
+    E500: internal error

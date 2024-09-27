@@ -1,0 +1,9 @@
+services:
+  wallet-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wallet-api-container
+    ports:
+      - "8080:8080"
+    restart: always
